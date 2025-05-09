@@ -1,0 +1,23 @@
+.play-list-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.play-list-item {
+  height: 280px;
+  overflow: hidden;
+}
+.play-list-img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.play-list-img:hover {
+  transform: scale(1.07);
+}
+.play-list-desc {
+  width: 100%;
+  margin-top: 10px;
+}

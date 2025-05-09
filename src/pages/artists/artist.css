@@ -1,0 +1,20 @@
+.artist {
+  padding: 20px;
+}
+.artist-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #2e1065 0%, #4a1d96 50%, #2e1065 100%);
+  padding: 40px;
+}
+.artist-name {
+  font-size: 60px;
+  font-weight: 600;
+}
+.artist-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}

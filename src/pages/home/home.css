@@ -1,0 +1,249 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin-left: 240px;
+  margin-top: 60px;
+  padding: 20px 30px;
+  background-color: #111;
+  min-height: calc(100vh - 70px);
+  color: #fff;
+  border-radius: 8px;
+  padding-bottom: 70px;
+}
+
+.music-section {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.music-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.music-card-link {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.artist-card-link {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.album-card-link {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.music-card {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  gap: 10px;
+}
+
+.music-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  background: #282828;
+}
+
+.music-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.music-card h4 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  font-weight: 300;
+}
+
+.music-card p {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.music-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.music-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.collection-section {
+  margin-bottom: 40px;
+}
+
+.collection-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.collection-card-link {
+  text-decoration: none;
+  color: inherit;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-card {
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.collection-card:hover {
+  transform: scale(1.03);
+  background: #282828;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.collection-card h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.collection-card p {
+  font-size: 16px;
+  margin: 0 10px 10px 10px;
+  color: #b3b3b3;
+}
+
+.collection-card p {
+  font-size: 16px;
+  margin: 0 10px 10px 10px;
+  color: #b3b3b3;
+}
+
+.header-container,
+.sidebar-container,
+.footer-container {
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar-container {
+  top: 80px;
+  bottom: 40px;
+  left: 0;
+  width: 320px;
+  overflow-y: auto;
+}
+
+.header-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+}
+
+.main-footer {
+  height: 60px;
+  background-color: #111;
+  border-top: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.footer-content {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.premium-btn {
+  background: linear-gradient(45deg, #e91e63, #9c27b0);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.premium-btn:hover {
+  background: linear-gradient(45deg, #9c27b0, #e91e63);
+}

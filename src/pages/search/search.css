@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+.search-top-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+}
+.search-top-item {
+  background-color: #302e2e5e;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.search-top-item:hover {
+  overflow: hidden;
+  transform: scale(1.05);
+  z-index: 2;
+  background: #282828;
+}
+.search-top-sub {
+  font-size: 14px;
+  color: #ccc;
+}
+.search-top-info {
+  overflow: hidden;
+}
+.search-top-name {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.search-top-desc {
+  white-space: nowrap;
+  margin-top: 5px;
+}
+.search-top-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
