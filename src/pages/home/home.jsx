@@ -25,9 +25,9 @@ export default function Home() {
     <>
       <div className="main-content">
         <CarouselComponents data={data} />
-        <Slider data={data.length > 0 && data[4]} />
+        <Slider data={data.length > 0 && data[3]} />
         <h2>Chill</h2>
-        <PlayList data={data.length > 0 && data[3]} />
+        <PlayList data={data.length > 0 && data[2]} />
       </div>
     </>
   );

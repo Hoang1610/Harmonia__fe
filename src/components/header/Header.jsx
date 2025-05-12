@@ -44,10 +44,10 @@ export default function Header({ searchKey }) {
           <img className="avatar-img" src="../../img/avatar.jpg" alt="Avatar" />
           <ul className="dropdown">
             <li>
-              <a href="/pages/register.html">Đăng nhập</a>
+              <Link to="/register">Đăng nhập</Link>
             </li>
             <li>
-              <a href="/pages/login.html">Đăng ký</a>
+              <Link to="/login">Đăng ký</Link>
             </li>
           </ul>
         </div>
