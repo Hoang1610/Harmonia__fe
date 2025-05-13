@@ -32,10 +32,10 @@ export default function Register() {
       return;
     } else {
       let data = { name, email, pass };
-      const res = await axios.post("/login", data);
+      const res = await axios.post("/register", data);
       if (res) {
         notification.success({
-          message: "Đăng nhập",
+          message: "Đăng Ký",
           description: "Thành công",
         });
         navigate("/");

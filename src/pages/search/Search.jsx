@@ -113,25 +113,29 @@ export default function Search() {
                     </p>
                   </div>
                 </div>
-                <div
-                  className="search-top-item"
-                  onClick={() => {
-                    navigate(`/artist${data.artists[0].link}`);
-                  }}
-                >
-                  <img
-                    src={data.artists[0].thumbnailM}
-                    alt=""
-                    className="search-top-img"
-                  />
-                  <div className="search-top-info">
-                    <p className="search-top-sub">Nghệ sĩ</p>
-                    <h3 className="search-top-name">{data.artists[0].name}</h3>
-                    <p className="search-top-desc">
-                      {data.artists[0].artistsNames}
-                    </p>
+                {data?.artists && data.artists[0] && (
+                  <div
+                    className="search-top-item"
+                    onClick={() => {
+                      navigate(`/artist${data.artists[0].link}`);
+                    }}
+                  >
+                    <img
+                      src={data.artists[0].thumbnailM}
+                      alt=""
+                      className="search-top-img"
+                    />
+                    <div className="search-top-info">
+                      <p className="search-top-sub">Nghệ sĩ</p>
+                      <h3 className="search-top-name">
+                        {data.artists[0].name}
+                      </h3>
+                      <p className="search-top-desc">
+                        {data.artists[0].artistsNames}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
             <div className="search-song" style={{ marginTop: "20px" }}>

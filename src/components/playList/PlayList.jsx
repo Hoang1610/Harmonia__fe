@@ -6,6 +6,7 @@ export default function PlayList({ data }) {
     <>
       <div className="play-list-wrap" style={{ marginTop: "30px" }}>
         {data &&
+          data.items &&
           data.items.map((item) => {
             if (index > 4) return;
             index++;

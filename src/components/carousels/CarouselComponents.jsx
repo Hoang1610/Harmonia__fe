@@ -22,7 +22,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={data[4].banner}
+              src={data[5].banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",
@@ -45,7 +45,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={data[6].items[0].banner}
+              src={data[7].items[0].banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",
@@ -68,7 +68,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={data[6].items[1].banner}
+              src={data[7].items[1].banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",

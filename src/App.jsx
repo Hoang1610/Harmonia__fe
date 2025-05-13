@@ -12,6 +12,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import TopPage from "./pages/topPage/TopPage";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/login";
+import SongLike from "./pages/songLike/SongLike";
 function App() {
   const currentSong = useSelector((state) => state.app.currentSong);
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/top100" element={<TopPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/songLike" element={<SongLike />} />
       </Routes>
 
       {!hideLayout && <MusicPlayer songId={currentSong} />}

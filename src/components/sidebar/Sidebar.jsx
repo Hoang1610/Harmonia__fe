@@ -27,10 +27,10 @@ export default function Sidebar() {
               </a>
             </li> */}
             <li>
-              <a href="/pages/favourite.html" className="favourite-btn">
+              <Link to="/songLike" className="favourite-btn">
                 <i className="fa-solid fa-heart" />
                 <span>Yêu thích</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
