@@ -2,12 +2,14 @@ import { message, notification } from "antd";
 import axios from "../../../axios.js";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 let initialForm = {
   email: "",
   pass: "",
 };
 export default function Login() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [form, setForm] = useState(initialForm);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +22,10 @@ export default function Login() {
         message: "Đăng nhập",
         description: "Thành công",
       });
+      console.log(res);
+      // dispatch({
+
+      // })
       navigate("/");
     } else {
       notification.error({
