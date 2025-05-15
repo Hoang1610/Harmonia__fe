@@ -45,7 +45,7 @@ function karaokeScript(dataLyric, title, artists) {
           Array.from(sentenceEl).forEach((item) => {
             let startTime = item.dataset.startTime;
             let endTime = item.dataset.endTime;
-            if (currentTime >= startTime) {
+            if (currentTime >= startTime - 100) {
               let time = endTime - startTime;
               item.children[0].style.transition = `width ${time}ms ease`;
               item.children[0].style.width = "100%";
