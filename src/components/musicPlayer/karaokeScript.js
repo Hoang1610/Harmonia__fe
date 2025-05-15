@@ -1,4 +1,5 @@
 function karaokeScript(dataLyric, title, artists) {
+  console.log(title);
   let currentSceen;
   let cleanUp;
   let audio = document.getElementById("audio");
@@ -15,7 +16,7 @@ function karaokeScript(dataLyric, title, artists) {
           );
         });
         let firstTime = dataLyric[0].words[0].startTime;
-        if (currentTime - firstTime < -5000) {
+        if (currentTime - firstTime < -5000 && title && artists) {
           karaokeContent.innerHTML = `<p>${title}</p><p>${artists}</p>`;
         }
         if (currentTime - firstTime > -5000 && currentTime - firstTime < 0) {

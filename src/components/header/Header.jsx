@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import setupAvatarDropdown from "./headerScript";
+import { useSelector } from "react-redux";
+import { Avatar } from "antd";
 export default function Header({ searchKey }) {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -11,6 +13,7 @@ export default function Header({ searchKey }) {
   useEffect(() => {
     setupAvatarDropdown();
   }, []);
+  const user = useSelector((state) => state.app.token);
   return (
     <header className="main-header">
       <div className="header-left">
@@ -41,15 +44,37 @@ export default function Header({ searchKey }) {
           <i className="fa-solid fa-bell" />
         </button>
         <div className="user-avatar">
-          <img className="avatar-img" src="../../img/avatar.jpg" alt="Avatar" />
-          <ul className="dropdown">
-            <li>
-              <Link to="/login">Đăng nhập</Link>
-            </li>
-            <li>
-              <Link to="/register">Đăng ký</Link>
-            </li>
-          </ul>
+          {user.name === "" ? (
+            <>
+              <img
+                className="avatar-img"
+                src="../../img/avatar.jpg"
+                alt="Avatar"
+              />
+              <ul className="dropdown">
+                <li>
+                  <Link to="/login">Đăng nhập</Link>
+                </li>
+                <li>
+                  <Link to="/register">Đăng ký</Link>
+                </li>
+              </ul>
+            </>
+          ) : (
+            <>
+              <Avatar
+                style={{ backgroundColor: "#f56a00", verticalAlign: "middle" }}
+                size="large"
+              >
+                {user.name.split(" ")[user.name.split(" ").length - 1]}
+              </Avatar>
+              <ul className="dropdown">
+                <li>
+                  <Link to="/login">Đăng xuất</Link>
+                </li>
+              </ul>
+            </>
+          )}
         </div>
       </div>
     </header>

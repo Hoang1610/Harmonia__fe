@@ -23,9 +23,10 @@ export default function Login() {
         description: "Thành công",
       });
       console.log(res);
-      // dispatch({
-
-      // })
+      dispatch({
+        type: "setToken",
+        payload: res.data.user,
+      });
       navigate("/");
     } else {
       notification.error({

@@ -33,6 +33,8 @@ const appReducer = (state = initalState, action) => {
       return { ...state, isLoop: action.payload };
     case "setToken":
       return { ...state, token: action.payload };
+    case "setSongLike":
+      return { ...state, token: { ...state.token, ...action.payload } };
     default:
       return state;
   }

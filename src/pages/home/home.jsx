@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import axios from "../../../axios.js";
 import { useSelector, useDispatch } from "react-redux";
 import CarouselComponents from "../../components/carousels/CarouselComponents.jsx";
@@ -21,6 +21,8 @@ export default function Home() {
     fetchData();
   }, []);
   const data = useSelector((state) => state.app.homeData);
+  const user = useSelector((state) => state.app.token);
+  console.log(user);
   return (
     <>
       <div className="main-content">

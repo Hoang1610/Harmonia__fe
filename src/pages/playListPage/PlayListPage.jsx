@@ -37,7 +37,6 @@ export default function PlayListPage() {
             <div className="play-list-page-info">
               <img src={data.thumbnail} alt="" className="play-list-page-img" />
               <h1 className="play-list-page-title">{data.title}</h1>
-              <p className="play-list-page-desc">{data.sortDescription}</p>
               <i className="fa-solid fa-heart"></i>
             </div>
             <div className="play-list-grid">

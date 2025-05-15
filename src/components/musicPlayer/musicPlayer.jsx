@@ -160,8 +160,15 @@ export default function MusicPlayer({ songId }) {
         currentSong.artists.map((item) => item.name).join(", ")
       );
       return () => {
-        cleanUp();
+        try {
+          cleanUp();
+        } catch (error) {}
       };
+    } else {
+      const karaoke = document.querySelector(".karaoke-content");
+      if (karaoke) {
+        karaoke.innerHTML = `<p>Karaoke đang cập nhật</p>`;
+      }
     }
   }, [dataLyric]);
   return (
@@ -338,16 +345,9 @@ export default function MusicPlayer({ songId }) {
                 <i className="fa-solid fa-angle-down"></i>
               </span>
             </div>
-            {dataLyric ? (
-              <div className="karaoke-content">
-                <p>{currentSong.title}</p>
-                <p>{currentSong.artists.map((item) => item.name).join(", ")}</p>
-              </div>
-            ) : (
-              <div className="karaoke-content">
-                <p>Karaoke đang cập nhật</p>
-              </div>
-            )}
+            <div className="karaoke-content">
+              <p>karaoke đang cập nhật</p>
+            </div>
           </div>
         </div>
       )}
