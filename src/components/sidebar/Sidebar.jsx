@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 import { sidebarfunc } from "./sidebarfunc.js";
 import { Link } from "react-router-dom";
 export default function Sidebar() {

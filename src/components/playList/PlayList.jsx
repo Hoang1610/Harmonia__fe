@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./PlayList.css";
+import "./playList.css";
 export default function PlayList({ data }) {
   let index = 0;
   return (
