@@ -13,6 +13,7 @@ export default function Home() {
         method: "get",
         url: "/home",
       });
+      console.log(data.data.data.data.items);
       dispatch({
         type: "fetchHome",
         payload: data.data.data.data.items,
@@ -31,11 +32,11 @@ export default function Home() {
             data.length > 0 && data[2].items !== undefined ? data[2] : data[3]
           }
         />
-        <h2>{data[8].title}</h2>
+        <h2>{data[9]?.title}</h2>
         <PlayList
           data={
-            data.length > 0 && data[8].sectionType === "playlist"
-              ? data[8]
+            data.length > 0 && data[9].sectionType === "playlist"
+              ? data[9]
               : data[2]
           }
         />
