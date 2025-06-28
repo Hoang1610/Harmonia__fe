@@ -22,22 +22,21 @@ export default function Home() {
   }, []);
   const data = useSelector((state) => state.app.homeData);
   const user = useSelector((state) => state.app.token);
-  console.log(user);
   return (
     <>
       <div className="main-content">
         <CarouselComponents data={data} />
         <Slider
           data={
-            data.length > 0 && data[4].items.mode !== undefined
-              ? data[4]
-              : data[3]
+            data.length > 0 && data[2].items !== undefined ? data[2] : data[3]
           }
         />
-        <h2>Chill</h2>
+        <h2>{data[8].title}</h2>
         <PlayList
           data={
-            data.length > 0 && data[3].title === "chill" ? data[3] : data[2]
+            data.length > 0 && data[8].sectionType === "playlist"
+              ? data[8]
+              : data[2]
           }
         />
       </div>

@@ -10,6 +10,7 @@ const contentStyle = {
 };
 export default function CarouselComponents({ data }) {
   const navigate = useNavigate();
+  console.log(data);
   return (
     <Carousel autoplay arrows>
       <div>
@@ -23,7 +24,7 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[5].banner !== undefined ? data[5].banner : data[4].banner
+                data[3].banner !== undefined ? data[3].banner : data[4].banner
               }
               onClick={() => navigate("/topChartTuan")}
               style={{
@@ -48,8 +49,8 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[7]?.items[0]?.banner !== undefined
-                  ? data[7].items[0].banner
+                data[5]?.items[0]?.banner !== undefined
+                  ? data[5].items[0].banner
                   : data[6].items[0].banner
               }
               onClick={() => navigate("/topChartTuan")}
@@ -75,8 +76,8 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[7]?.items[1]?.banner !== undefined
-                  ? data[7].items[1].banner
+                data[5]?.items[1]?.banner !== undefined
+                  ? data[5].items[1].banner
                   : data[6].items[1].banner
               }
               onClick={() => navigate("/topChartTuan")}
@@ -103,8 +104,8 @@ export default function CarouselComponents({ data }) {
             <img
               onClick={() => navigate("/topChartTuan")}
               src={
-                data[7]?.items[2]?.banner !== undefined
-                  ? data[7].items[2].banner
+                data[5]?.items[2]?.banner !== undefined
+                  ? data[5].items[2].banner
                   : data[6].items[2].banner
               }
               style={{

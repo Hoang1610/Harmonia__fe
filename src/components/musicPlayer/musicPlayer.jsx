@@ -315,7 +315,6 @@ export default function MusicPlayer({ songId }) {
               </div>
             </div>
             <div className="right-section">
-              <i className="fa-solid fa-desktop" />
               <i
                 className="fa-solid fa-microphone"
                 style={!currentSong.hasLyric ? { cursor: "not-allowed" } : {}}
@@ -323,16 +322,7 @@ export default function MusicPlayer({ songId }) {
                   if (currentSong.hasLyric) setIskaraoke(true);
                 }}
               />
-              <i className="fa-solid fa-bars" />
-              <i className="fa-solid fa-volume-low" />
-              <input
-                type="range"
-                className="volume-bar"
-                defaultValue={50}
-                max={100}
-              />
-              <i className="fa-solid fa-tv" />
-              <i className="fa-solid fa-expand" />
+              <span>Karaoke</span>
             </div>
           </div>
           <div className={`karaoke ${isKaraoke && "show"}`}>
