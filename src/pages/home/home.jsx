@@ -32,12 +32,12 @@ export default function Home() {
             data.length > 0 && data[2].items !== undefined ? data[2] : data[3]
           }
         />
-        <h2>{data[9]?.title}</h2>
+        <h2>{data[9]?.title || data[8]?.title}</h2>
         <PlayList
           data={
-            data.length > 0 && data[9].sectionType === "playlist"
+            data.length > 0 && data[9]?.sectionType === "playlist"
               ? data[9]
-              : data[2]
+              : data[8]
           }
         />
       </div>
