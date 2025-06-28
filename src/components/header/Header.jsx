@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Header.css";
+import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import setupAvatarDropdown from "./headerScript";
 import { useSelector } from "react-redux";
