@@ -1,4 +1,4 @@
-import "./PlayListPage.css";
+import "./playListPage.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../../../axios.js";
