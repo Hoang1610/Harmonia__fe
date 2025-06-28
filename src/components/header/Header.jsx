@@ -36,7 +36,7 @@ export default function Header({ searchKey }) {
           />
         </form>
       </div>
-      <div className="header-right">
+      {/* <div className="header-right">
         <a href="/pages/premium.html" className="premium-btn-link">
           <button className="premium-btn">Nâng cấp Premium</button>
         </a>
@@ -61,22 +61,22 @@ export default function Header({ searchKey }) {
               </ul>
             </>
           ) : (
-            <>
-              <Avatar
-                style={{ backgroundColor: "#f56a00", verticalAlign: "middle" }}
-                size="large"
-              >
-                {user.name.split(" ")[user.name.split(" ").length - 1]}
-              </Avatar>
-              <ul className="dropdown">
-                <li>
-                  <Link to="/login">Đăng xuất</Link>
-                </li>
-              </ul>
-            </>
+            // <>
+            //   <Avatar
+            //     style={{ backgroundColor: "#f56a00", verticalAlign: "middle" }}
+            //     size="large"
+            //   >
+            //     {user.name.split(" ")[user.name.split(" ").length - 1]}
+            //   </Avatar>
+            //   <ul className="dropdown">
+            //     <li>
+            //       <Link to="/login">Đăng xuất</Link>
+            //     </li>
+            //   </ul>
+            // </>
           )}
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

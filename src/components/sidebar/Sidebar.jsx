@@ -26,12 +26,12 @@ export default function Sidebar() {
                 <span>Playlist cá nhân</span>
               </a>
             </li> */}
-            <li>
+            {/* <li>
               <Link to="/songLike" className="favourite-btn">
                 <i className="fa-solid fa-heart" />
                 <span>Yêu thích</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </aside>
