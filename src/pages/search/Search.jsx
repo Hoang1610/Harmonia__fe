@@ -23,7 +23,7 @@ export default function Search() {
   }, [key]);
   return (
     <>
-      {data && (
+      {data && data.song ? (
         <div className="main-content">
           <div className="search">
             <h1 className="search-title">Kết quả tìm kiếm</h1>
@@ -60,13 +60,15 @@ export default function Search() {
                   }}
                 >
                   <img
-                    src={data.songs[0].thumbnailM}
+                    src={data?.song && data.song[0] && data.songs[0].thumbnailM}
                     alt=""
                     className="search-top-img"
                   />
                   <div className="search-top-info">
                     <p className="search-top-sub">Bài hát</p>
-                    <h3 className="search-top-name">{data.songs[0].title}</h3>
+                    <h3 className="search-top-name">
+                      {data?.song && data.songs[0].title}
+                    </h3>
                     <p className="search-top-desc">
                       {data.song &&
                         data.song[0].artists &&
@@ -98,7 +100,7 @@ export default function Search() {
                   }}
                 >
                   <img
-                    src={data.songs[1].thumbnailM}
+                    src={data?.song && data.songs[1].thumbnailM}
                     alt=""
                     className="search-top-img"
                   />
@@ -194,6 +196,10 @@ export default function Search() {
               </div>
             </div>
           </div>
+        </div>
+      ) : (
+        <div className="main-content">
+          <h2>Không tìm thấy kết quả</h2>
         </div>
       )}
     </>
