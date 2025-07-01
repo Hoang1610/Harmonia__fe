@@ -23,7 +23,7 @@ export default function Search() {
   }, [key]);
   return (
     <>
-      {data && data.song ? (
+      {data && data.songs ? (
         <div className="main-content">
           <div className="search">
             <h1 className="search-title">Kết quả tìm kiếm</h1>
@@ -39,7 +39,7 @@ export default function Search() {
                       type: "setCurrentSong",
                       payload: data.songs[0].encodeId,
                     });
-                    if (data.song && data.songs[0].artists[0].id) {
+                    if (data.songs[0].artists[0].id) {
                       dispatch({
                         type: "setNextSong",
                         payload: data.songs[0].artists[0].id,
@@ -60,7 +60,7 @@ export default function Search() {
                   }}
                 >
                   <img
-                    src={data?.song && data.song[0] && data.songs[0].thumbnailM}
+                    src={data.songs[0].thumbnailM}
                     alt=""
                     className="search-top-img"
                   />
@@ -100,7 +100,7 @@ export default function Search() {
                   }}
                 >
                   <img
-                    src={data?.song && data.songs[1].thumbnailM}
+                    src={data.songs[1].thumbnailM}
                     alt=""
                     className="search-top-img"
                   />
