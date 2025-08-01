@@ -29,15 +29,15 @@ export default function Home() {
         <CarouselComponents data={data} />
         <Slider
           data={
-            data.length > 0 && data[2].items !== undefined ? data[2] : data[3]
+            data.length > 0 && data[7].items !== undefined ? data[7] : data[8]
           }
         />
         <h2>{data[9]?.title || data[8]?.title}</h2>
         <PlayList
           data={
-            data.length > 0 && data[9]?.sectionType === "playlist"
-              ? data[9]
-              : data[8]
+            data.length > 0 && data[6]?.sectionType === "playlist"
+              ? data[6]
+              : data[7]
           }
         />
       </div>
