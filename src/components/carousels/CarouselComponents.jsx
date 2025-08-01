@@ -10,7 +10,6 @@ const contentStyle = {
 };
 export default function CarouselComponents({ data }) {
   const navigate = useNavigate();
-  console.log(data);
   return (
     <Carousel autoplay arrows>
       <div>
@@ -24,7 +23,7 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[8].banner !== undefined ? data[8].banner : data[9].banner
+                data[8].banner !== undefined ? data[8].banner : data[7].banner
               }
               onClick={() => navigate("/topChartTuan")}
               style={{
@@ -49,9 +48,9 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[1]?.items[0]?.banner !== undefined
-                  ? data[1].items[0].banner
-                  : data[2].items[0].banner
+                data[9]?.items[0]?.banner !== undefined
+                  ? data[9].items[0].banner
+                  : data[1].items[0].banner
               }
               onClick={() => navigate("/topChartTuan")}
               style={{
@@ -78,9 +77,9 @@ export default function CarouselComponents({ data }) {
           >
             <img
               src={
-                data[1]?.items[1]?.banner !== undefined
-                  ? data[1].items[1].banner
-                  : data[2].items[1].banner
+                data[9]?.items[1]?.banner !== undefined
+                  ? data[9].items[1].banner
+                  : data[1].items[1].banner
               }
               onClick={() => navigate("/topChartTuan")}
               style={{
@@ -107,9 +106,9 @@ export default function CarouselComponents({ data }) {
             <img
               onClick={() => navigate("/topChartTuan")}
               src={
-                data[1]?.items[2]?.banner !== undefined
-                  ? data[1].items[2].banner
-                  : data[2].items[2].banner
+                data[9]?.items[2]?.banner !== undefined
+                  ? data[9].items[2].banner
+                  : data[1].items[2].banner
               }
               style={{
                 objectFit: "contain",
