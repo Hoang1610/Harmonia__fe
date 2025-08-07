@@ -29,7 +29,9 @@ export default function Home() {
         <CarouselComponents data={data} />
         <Slider
           data={
-            data.length > 0 && data[6].items !== undefined ? data[6] : data[7]
+            data.length > 0 && data[6].items.all !== undefined
+              ? data[6]
+              : data[7]
           }
         />
         <h2>{data[5]?.title || data[6]?.title}</h2>
