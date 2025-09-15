@@ -31,15 +31,15 @@ export default function Home() {
           data={
             data.length > 0 && data[6].items.all !== undefined
               ? data[6]
-              : data[7]
+              : data[5]
           }
         />
-        <h2>{data[5]?.title || data[6]?.title}</h2>
+        <h2>{data[4]?.title || data[5]?.title}</h2>
         <PlayList
           data={
-            data.length > 0 && data[5]?.sectionType === "playlist"
-              ? data[5]
-              : data[6]
+            data.length > 0 && data[4]?.sectionType === "playlist"
+              ? data[4]
+              : data[5]
           }
         />
       </div>
