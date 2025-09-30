@@ -31,7 +31,7 @@ export default function Home() {
           data={
             data.length > 0 && data[6].items.all !== undefined
               ? data[6]
-              : data[5]
+              : data[7]
           }
         />
         <h2>{data[4]?.title || data[5]?.title}</h2>
