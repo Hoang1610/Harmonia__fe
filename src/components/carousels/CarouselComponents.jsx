@@ -10,6 +10,11 @@ const contentStyle = {
 };
 export default function CarouselComponents({ data }) {
   const navigate = useNavigate();
+  const ojFind = data.find((item) => item.banner !== undefined);
+  const arrFind = data.find(
+    (item) => Array.isArray(item.items) && item.items[0]?.banner !== undefined
+  );
+  console.log(arrFind);
   return (
     <Carousel autoplay arrows>
       <div>
@@ -22,9 +27,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={
-                data[6].banner !== undefined ? data[6].banner : data[8].banner
-              }
+              src={ojFind.banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",
@@ -47,11 +50,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={
-                data[9]?.items[0]?.banner !== undefined
-                  ? data[9].items[0].banner
-                  : data[10].items[0].banner
-              }
+              src={arrFind.items[0]?.banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",
@@ -76,11 +75,7 @@ export default function CarouselComponents({ data }) {
             }}
           >
             <img
-              src={
-                data[9]?.items[1]?.banner !== undefined
-                  ? data[9].items[1].banner
-                  : data[10].items[1].banner
-              }
+              src={arrFind.items[1]?.banner}
               onClick={() => navigate("/topChartTuan")}
               style={{
                 objectFit: "contain",
@@ -105,11 +100,7 @@ export default function CarouselComponents({ data }) {
           >
             <img
               onClick={() => navigate("/topChartTuan")}
-              src={
-                data[9]?.items[2]?.banner !== undefined
-                  ? data[9].items[2].banner
-                  : data[10].items[2].banner
-              }
+              src={arrFind.items[2]?.banner}
               style={{
                 objectFit: "contain",
                 height: "160px",

@@ -22,26 +22,17 @@ export default function Home() {
     fetchData();
   }, []);
   const data = useSelector((state) => state.app.homeData);
-  const user = useSelector((state) => state.app.token);
+  const dataSlier = data.find((item) => item.sectionType === "new-release");
+  const dataPlayList = data.find(
+    (item) => (item.sectionType === "playlist" && item.title) === "Chill"
+  );
   return (
     <>
       <div className="main-content">
         <CarouselComponents data={data} />
-        <Slider
-          data={
-            data.length > 0 && data[6].items.all !== undefined
-              ? data[6]
-              : data[7]
-          }
-        />
-        <h2>{data[4]?.title || data[5]?.title}</h2>
-        <PlayList
-          data={
-            data.length > 0 && data[4]?.sectionType === "playlist"
-              ? data[4]
-              : data[5]
-          }
-        />
+        <Slider data={dataSlier} />
+        <h2>{dataPlayList?.title}</h2>
+        <PlayList data={dataPlayList} />
       </div>
     </>
   );
